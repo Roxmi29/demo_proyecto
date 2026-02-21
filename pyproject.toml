@@ -1,0 +1,22 @@
+[project]
+name = "demo-proyecto"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Miguel Romero", email = "miguel29romero@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "requests (>=2.32.5,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "demo_proyecto", from = "src"}]
+
+[tool.poetry.scripts]
+demo-proyecto = "demo_proyecto.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
